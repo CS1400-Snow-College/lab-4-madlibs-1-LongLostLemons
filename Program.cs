@@ -28,9 +28,13 @@ for (int i = 0; i < storyWords.Length; i++)
 }
 
 string finalStory = "";
-foreach (string word in storyWords)
+for (int i = 0; i < storyWords.Length; i++)
 {
-    finalStory += word + " ";
+    finalStory += storyWords[i];
+    if (i < storyWords.Length - 1)
+    {
+        finalStory += " ";
+    }
 }
 
 Console.WriteLine("Your Space Adventure");
