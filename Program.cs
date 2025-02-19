@@ -20,7 +20,7 @@ for (int i = 0; i < storyWords.Length; i++)
         string punctuation = word.Length > end + 1 ? word.Substring(end + 1) : "";
 
         string article = StartsWithVowel(placeholder) ? "an" : "a";
-        Console.Write($"Plese give me {article} {placeholder}: ");
+        Console.Write($"Please give me {article} {placeholder}: ");
         string userInput = Console.ReadLine();
 
         storyWords[i] = userInput + punctuation;

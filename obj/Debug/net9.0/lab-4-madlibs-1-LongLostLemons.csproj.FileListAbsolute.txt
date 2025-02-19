@@ -1,0 +1,15 @@
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\bin\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.exe
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\bin\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.deps.json
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\bin\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.runtimeconfig.json
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\bin\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.dll
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\bin\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.pdb
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.AssemblyInfoInputs.cache
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.AssemblyInfo.cs
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.csproj.CoreCompileInputs.cache
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.sourcelink.json
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.dll
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\refint\lab-4-madlibs-1-LongLostLemons.dll
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.pdb
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\lab-4-madlibs-1-LongLostLemons.genruntimeconfig.cache
+C:\Users\jenna\my-code-dir\lab-4-madlibs-1-LongLostLemons\obj\Debug\net9.0\ref\lab-4-madlibs-1-LongLostLemons.dll
