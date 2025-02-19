@@ -23,9 +23,9 @@ for (int i = 0; i < storyWords.Length; i++)
         string punctuation = word.Length > end + 1 ? word.Substring(end + 1) : "";
 
         bool alreadyAsked = false;
-        for (int j = 0; < i; j++)
+        for (int j = 0; j < i; j++)
         {
-            if (placehodlers[j] == placehodler)
+            if (placehodlers[j] == placeholder) // this was spelt placehodler. hodler should be a word imo. 
             {
                 storyWords[i] = storyWords[j] + punctuation;
                 alreadyAsked = true;
@@ -35,11 +35,11 @@ for (int i = 0; i < storyWords.Length; i++)
 
         if(!alreadyAsked)
         {
-            string article = StartsWithVowel(placehodler) ? "an" : "a";
+            string article = StartsWithVowel(placeholder) ? "an" : "a";
             Console.Write($"Please give me {article} {placeholder}: ");
             string userInput = Console.ReadLine();
             storyWords[i] = userInput + punctuation;
-            placehodlers[i] = placeholder; // why the placeholder(s) are incapable of working idk, this should be a fixed edition. 
+            placehodlers[i] = placeholder; 
         }
     }
 }
