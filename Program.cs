@@ -3,7 +3,7 @@ Console.WriteLine("Welcome to Madlibs!");
 Console.WriteLine("This game will ask you for words to complete a story, any will do. Have fun, and enjoy!");
 Console.WriteLine("Hint: Words that fit the request will make the story better!");
 
-string originalStory = "One (adjective) day aboard the spaceship, (adjective) (noun) was doing a routine (noun) check near the airlock. Everything seemed (adjective) until suddenly, a loud (noun) echoed through the ship. Without warning, the airlock (verb ending in -ed) open, and poor (noun) was (verb ending in -ing) through the void of space! (Exclamation)! they shouted, flailing their (plural noun) as they drifted further from the ship. Back on the bridge, Captain (noun) slammed a (noun) in frustration. 'We need to (verb) them back before they run out of (liquid)!' Meanwhile, (noun) spotted a nearby (noun) and used their (noun) to propel themselves towards it. After a tense moment, they finally (verb ending in -ed) onto the airlock just as the crew (verb ending in -ed) it shut. Breathing heavily, (noun) muttered, '(silly phrase),' vowing never to (verb) near the airlock again.";
+string originalStory = "One (adjective) day aboard the spaceship, a (adjective) (noun) does a routine (noun) check near the airlock. Everything seems (adjective) until suddenly, a loud (noun) echoes through the ship. Without warning, the airlock pops open, and poor (noun) floats through the void of space! '(Exclamation)!' they shout, waving an arm as they drift further from the ship. Back on the bridge, Captain (noun) slams a (noun) in frustration. 'We must grab them before they run out of (liquid)!' Meanwhile, (noun) spots a nearby (noun) and uses a (noun) to push toward it. After a tense moment, they land on the airlock just as the crew pulls it shut. Breathing hard, (noun) mutters, '(exclamation),' vowing never to go near the airlock again.";
 string[] storyWords = originalStory.Split(' ');
 string[] placeholders = new string[storyWords.Length];
 string[] userInputs = new string[storyWords.Length];
@@ -30,21 +30,6 @@ for (int i = 0; i < storyWords.Length; i++)
             Console.WriteLine("Please give me a noun: ");
             userInput = Console.ReadLine();
         }
-        else if (placeholder == "verb ending in -ed")
-        {
-            Console.WriteLine("Please give me a verb ending in -ed: ");
-            userInput = Console.ReadLine();
-        }
-        else if (placeholder == "verb ending in -ing")
-        {
-            Console.WriteLine("Please give me a verb ending in -ing: ");
-            userInput = Console.ReadLine();
-        }
-        else if (placeholder == "plural noun")
-        {
-            Console.WriteLine("Please give me a plural noun: ");
-            userInput = Console.ReadLine();
-        }
         else if (placeholder == "exclamation")
         {
             Console.WriteLine("Please give me an exclamation: ");
@@ -55,12 +40,7 @@ for (int i = 0; i < storyWords.Length; i++)
             Console.WriteLine("Please give me a liquid: ");
             userInput = Console.ReadLine();
         }
-        else if (placeholder == "silly phrase")
-        {
-            Console.WriteLine("Please give me a silly phrase: ");
-            userInput = Console.ReadLine();
-        }
-
+       
         userInput = RemoveSpacesFromEdges(userInput);
 
         string article = IsVowel(userInput) ? "an" : "a";
