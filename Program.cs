@@ -61,12 +61,38 @@ for (int i = 0; i < storyWords.Length; i++)
             userInput = Console.ReadLine();
         }
 
+        userInput = RemoveSpacesFromEdges(userInput);
+
         string article = IsVowel(userInput) ? "an" : "a";
         
         storyWords[i] = article + " " + userInput + punctuation;
         placeholders[i] = placeholder;
         userInputs[i] = userInput;
     }
+}
+
+string RemoveSpacesFromEdges(string input)
+{
+    int start = 0;
+    int end = input.Length - 1;
+
+    while (start <= end && input[start] == ' ')
+    {
+        start++;
+    }
+
+    while (end >= start && input[end] == ' ')
+    {
+        end--;
+    }
+
+    string result = "";
+    for (int i = start; i <= end; i++)
+    {
+        result += input[i];
+    }
+
+    return result;
 }
 
 string finalStory = "";
