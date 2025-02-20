@@ -69,26 +69,18 @@ for (int i = 0; i < storyWords.Length; i++)
             article = "an";
         }
         
-        storyWords[i] = userInput + punctuation;
+        storyWords[i] = article + " " + userInput + punctuation;
         placeholders[i] = placeholder;
         userInputs[i] = userInput;
     }
 }
 
 string finalStory = "";
-bool firstWord = true;
 foreach (string word in storyWords)
 {
-    if (firstWord)
-    {
-        finalStory += word;
-        firstWord = false;
-    }
-    else
-    {
-        finalStory += " " + word;
-    }
+    finalStory += word + " ";
 }
+
  Console.WriteLine();
  Console.WriteLine("Your Space Adventure");
  Console.WriteLine();
