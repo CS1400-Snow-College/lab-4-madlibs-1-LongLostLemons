@@ -172,6 +172,11 @@ foreach (string word in storyWords)
 
  bool IsVowel(string word)
  {
+    if (word.Length == 0)
+    {
+        return false;
+    }
+    
     char firstChar = char.ToLower(word[0]);
     return firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u';
  }
