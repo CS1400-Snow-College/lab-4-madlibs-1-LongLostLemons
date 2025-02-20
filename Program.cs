@@ -22,27 +22,53 @@ for (int i = 0; i < storyWords.Length; i++)
 
         string userInput = "";
 
-        for (int j = 0; j < i; j++)
+        if (placeholder == "adjective")
         {
-            if (placeholders[j] == basePlaceholder)
-            {
-                userInput = userInputs[j];
-                break;
-            }
+            Console.WriteLine("Please give me an adjective: ");
+            userInput = Console.ReadLine();
         }
-
-        if (userInput == "")
+        else if (placeholder == "noun")
         {
-            string article = "a";
-            char firstChar = char.ToLower(placeholder[0]);
-            if (firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u')
-            {
-                article = "an";
-            }
-            Console.Write("Please give me " + article + " " + placeholder + ": ");
+            Console.WriteLine("Please give me a noun: ");
+            userInput = Console.ReadLine();
+        }
+        else if (placeholder == "verb ending in -ed")
+        {
+            Console.WriteLine("Please give me a verb ending in -ed: ");
+            userInput = Console.ReadLine();
+        }
+        else if (placeholder == "verb ending in -ing")
+        {
+            Console.WriteLine("Please give me a verb ending in -ing: ");
+            userInput = Console.ReadLine();
+        }
+        else if (placeholder == "plural noun")
+        {
+            Console.WriteLine("Please give me a plural noun: ");
+            userInput = Console.ReadLine();
+        }
+        else if (placeholder == "exclaimation")
+        {
+            Console.WriteLine("Please give me an exclaimation: ");
+            userInput = Console.ReadLine();
+        }
+        else if (placeholder == "liquid")
+        {
+            Console.WriteLine("Please give me a liquid: ");
+            userInput = Console.ReadLine();
+        }
+        else if (placeholder == "silly phrase")
+        {
+            Console.WriteLine("Please give me a silly phrase: ");
             userInput = Console.ReadLine();
         }
 
+        string article = "a";
+        if (IsVowel(userInput))
+        {
+            article = "an";
+        }
+        
         storyWords[i] = userInput + punctuation;
         placeholders[i] = placeholder;
         userInputs[i] = userInput;
@@ -150,4 +176,10 @@ foreach (string word in storyWords)
     }
 
     return result;
+ }
+
+ bool IsVowel(string word)
+ {
+    char firstChar = char.ToLower(word[0]);
+    return firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u';
  }
