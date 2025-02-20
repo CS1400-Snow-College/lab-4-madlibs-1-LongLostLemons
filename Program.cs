@@ -18,8 +18,6 @@ for (int i = 0; i < storyWords.Length; i++)
         string placeholder = ExtractPlaceHolder(word);
         string punctuation = GetPunctuation(word);
 
-        string basePlaceholder = RemoveSamePrefix(placeholder);
-
         string userInput = "";
 
         if (placeholder == "adjective")
@@ -47,9 +45,9 @@ for (int i = 0; i < storyWords.Length; i++)
             Console.WriteLine("Please give me a plural noun: ");
             userInput = Console.ReadLine();
         }
-        else if (placeholder == "exclaimation")
+        else if (placeholder == "exclamation")
         {
-            Console.WriteLine("Please give me an exclaimation: ");
+            Console.WriteLine("Please give me an exclamation: ");
             userInput = Console.ReadLine();
         }
         else if (placeholder == "liquid")
@@ -63,11 +61,7 @@ for (int i = 0; i < storyWords.Length; i++)
             userInput = Console.ReadLine();
         }
 
-        string article = "a";
-        if (IsVowel(userInput))
-        {
-            article = "an";
-        }
+        string article = IsVowel(userInput) ? "an" : "a";
         
         storyWords[i] = article + " " + userInput + punctuation;
         placeholders[i] = placeholder;
@@ -143,40 +137,13 @@ foreach (string word in storyWords)
     return punctuation;
  }
 
- string RemoveSamePrefix(string placeholder)
- {
-    string result = "";
-    string prefix = "same";
-    int prefixLength = prefix.Length;
-    int index = 0;
-
-    while (index < prefixLength && index < placeholder.Length && placeholder[index] == prefix[index])
-    {
-        index++;
-    }
-
-    if (index == prefixLength)
-    {
-        for (int i = prefixLength; i < placeholder.Length; i++)
-        {
-            result += placeholders[i];
-        }
-    }
-    else
-    {
-        result = placeholder;
-    }
-
-    return result;
- }
-
  bool IsVowel(string word)
  {
     if (word.Length == 0)
     {
         return false;
     }
-    
+
     char firstChar = char.ToLower(word[0]);
     return firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u';
  }
